@@ -9,14 +9,6 @@ a {
   color: black;
 }
 
-h2 {
-  margin-bottom: 10px;
-}
-
-h3 {
-  margin: 10px 0;
-}
-
 body {
   font-family: revert;
 }
@@ -29,32 +21,25 @@ header nav ul {
   display: flex;
   flex-direction: column;
   list-style: none;
-  padding: 0;
-  margin: 0;
   gap: 20px;
   justify-content: center;
   align-items: center;
 }
 
-footer {
-  text-align: center;
+main {
   margin: 20px;
-}
-footer a {
-  margin: 0 10px;
 }
 
 .mensaje-bienvenida {
   text-align: center;
   font-size: large;
-  margin: 40px 0;
+  margin-bottom: 20px;
 }
 
 .categorias {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  margin: 0 20px;
 }
 .categorias h2 {
   margin: 10px 0;
@@ -68,15 +53,26 @@ footer a {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin: 20px;
   align-items: flex-start;
+}
+.pagina-arma h2 {
+  margin-bottom: 10px;
+}
+.pagina-arma h3 {
+  margin: 10px 0;
 }
 
 .arma-imagen {
   width: 100%;
 }
 
-.pagina-sobre-nosotros {
+footer p {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+footer {
   margin: 20px;
 }
 
