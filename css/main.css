@@ -68,6 +68,7 @@ main {
 
 footer p {
   display: flex;
+  flex-direction: column;
   gap: 20px;
   justify-content: center;
   align-items: center;
@@ -76,18 +77,27 @@ footer {
   margin: 20px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   header nav ul {
     flex-direction: row;
+    flex-wrap: wrap;
   }
   .categorias {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .pagina-arma {
     flex-direction: row;
   }
   .arma-imagen {
     width: 300px;
+  }
+  footer p {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .categorias {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

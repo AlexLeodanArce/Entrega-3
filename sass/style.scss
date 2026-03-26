@@ -1,4 +1,5 @@
-//Reset
+@use "variables" as *;
+
 *{
     padding: 0;
     margin: 0;
@@ -18,7 +19,7 @@ header{
     //Estilizar el título de cada página
     h1{
         text-align: center;
-        margin: 20px;
+        margin: $mar-est;
     }
     nav{
         //Estilizar la barra de navegación
@@ -26,7 +27,7 @@ header{
             display: flex;
             flex-direction: column;
             list-style: none;
-            gap: 20px;
+            gap: $gap-est;
             justify-content: center;
             align-items: center;
         }
@@ -34,23 +35,23 @@ header{
 }
 
 main{
-    margin: 20px;
+    margin: $mar-est;
 }
 
 //Estilizar el mensaje de bienvenida
 .mensaje-bienvenida {
     text-align: center;
     font-size: large;
-    margin-bottom: 20px;
+    margin-bottom: $mar-est;
 }
 
 // Se define la tabla como una columna con las filas que sean necesarias
 .categorias {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: $gap-est;
     h2{
-        margin: 10px 0;
+        margin: $mar-half 0;
     }
     //Para que las imágenes no superen a sus contenedores
     img{
@@ -64,13 +65,13 @@ main{
 .pagina-arma {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: $gap-double;
     align-items: flex-start;
     h2{
-        margin-bottom: 10px;
+        margin-bottom: $mar-half;
     }
     h3{
-        margin: 10px 0;
+        margin: $mar-half 0;
     }
 }
 
@@ -81,31 +82,42 @@ main{
 footer{
     p{
         display: flex;
-        gap: 20px;
+        flex-direction: column;
+        gap: $gap-est;
         justify-content: center;
         align-items: center;
     }
-    margin: 20px;
+    margin: $mar-est;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $tablet) {
 
-    //La barra de navegación se vuelve horizontal
     header nav ul{
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    //Una tabla de cuatro columnas
+    //Una tabla de dos columnas
     .categorias{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    //La página de información de cada arma se vuelve horizontal
     .pagina-arma{
         flex-direction: row;
     }
 
     .arma-imagen {
         width: 300px;
+    }
+
+    footer p{
+        flex-direction: row;
+    }
+}
+
+@media (min-width: $desktop) {
+    //Una tabla de cuatro columnas
+    .categorias{
+        grid-template-columns: repeat(4, 1fr);
     }
 }
