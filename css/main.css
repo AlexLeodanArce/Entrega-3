@@ -1,120 +1,104 @@
-/* NOTA GLOBAL: Se está usando Mobile First */
-
-
-/*Reset*/
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
-    color: black;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-body{
-    font-family: revert;
+body {
+  font-family: revert;
 }
 
-/*Estilizar el título de cada página*/
 header h1 {
-    text-align: center;
-    margin: 20px;
+  text-align: center;
+  margin: 20px;
+}
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
-/*Estilizar la barra de navegación*/
-nav ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+main {
+  margin: 20px;
 }
 
-footer {
-    text-align: center;
-    margin: 20px;
-}
-
-footer a{
-    margin: 0 10px;
-}
-
-/*Estilizar el mensaje de bienvenida*/
 .mensaje-bienvenida {
-    text-align: center;
-    font-size: large;
-    margin: 40px 0;
+  text-align: center;
+  font-size: large;
+  margin-bottom: 20px;
 }
 
-/* Se define la tabla como una columna con las filas que sean necesarias */
 .categorias {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
-
-/*Para que las imágenes no superen a sus contenedores*/
+.categorias h2 {
+  margin: 10px 0;
+}
 .categorias img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
-
-.categorias h2{
-    margin: 10px 0;
-}
-
-/*Colocar cada página con la imagen arriba y la descripción abajo*/
 
 .pagina-arma {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    margin: 20px;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+}
+.pagina-arma h2 {
+  margin-bottom: 10px;
+}
+.pagina-arma h3 {
+  margin: 10px 0;
 }
 
-.arma-imagen{
-    width: 100%;
+.arma-imagen {
+  width: 100%;
 }
 
-/**/
-
-h2{
-    margin-bottom: 10px;
+footer p {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  margin: 20px;
 }
 
-h3{
-    margin: 10px 0;
+@media (min-width: 768px) {
+  header nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .categorias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pagina-arma {
+    flex-direction: row;
+  }
+  .arma-imagen {
+    width: 300px;
+  }
+  footer p {
+    flex-direction: row;
+  }
 }
-
-.pagina-sobre-nosotros{
-    margin: 20px;
-}
-
 @media (min-width: 1024px) {
-
-    /*La barra de navegación se vuelve horizontal*/
-    nav ul{
-        flex-direction: row;
-    }
-
-    /*Una tabla de cuatro columnas*/
-    .categorias{
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    /*La página de información de cada arma se vuelve horizontal*/
-    .pagina-arma{
-        flex-direction: row;
-    }
-
-    .arma-imagen {
-        width: 300px;
-    }
+  .categorias {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
+
+/*# sourceMappingURL=main.css.map */
