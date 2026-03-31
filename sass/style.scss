@@ -1,5 +1,7 @@
 @use "variables" as *;
 
+@use "mixins" as *;
+
 *{
     padding: 0;
     margin: 0;
@@ -24,12 +26,15 @@ header{
     nav{
         //Estilizar la barra de navegación
         ul{
-            display: flex;
-            flex-direction: column;
+            //display: flex;
+            //flex-direction: column;
+            //gap: $gap-est;
+            //justify-content: center;
+            //align-items: center;
+
+            @include flexbox(column, $gap-est, center, center);
+
             list-style: none;
-            gap: $gap-est;
-            justify-content: center;
-            align-items: center;
         }
     }
 }
@@ -63,10 +68,13 @@ main{
 //Colocar cada página con la imagen arriba y la descripción abajo
 
 .pagina-arma {
-    display: flex;
-    flex-direction: column;
-    gap: $gap-double;
-    align-items: flex-start;
+    //display: flex;
+    //flex-direction: column;
+    //gap: $gap-double;
+    //align-items: flex-start;
+
+    @include flexbox(column, $gap-double, flex-start, null);
+
     h2{
         margin-bottom: $mar-half;
     }
@@ -81,11 +89,13 @@ main{
 
 footer{
     p{
-        display: flex;
-        flex-direction: column;
-        gap: $gap-est;
-        justify-content: center;
-        align-items: center;
+        //display: flex;
+        //flex-direction: column;
+        //gap: $gap-est;
+        //justify-content: center;
+        //align-items: center;
+
+        @include flexbox(column, $gap-est, center, center);
     }
     margin: $mar-est;
 }
